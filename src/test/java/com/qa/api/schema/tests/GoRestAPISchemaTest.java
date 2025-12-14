@@ -20,14 +20,14 @@ public class GoRestAPISchemaTest extends BaseTest{
 	
 	@BeforeClass
 	public void goRestTokenSetup(){
-		ConfigManager.set("bearertoken", "ac24b412492d4550d48d6f4ced831f24717980d4f51faea1eccdee6f592c67fb");
+		ConfigManager.set("bearertoken", "d0bf1714ac04c10dd2982e009d2dffe694a8e0b53af518cb7370e41e046a72f6");
 	}
 	
 	@Test
 	public void getUsersAPISchemaTest() {
 		Response response = 
 				restClient.get(BASE_URL_GOREST, GOREST_USERS_ENDPOINT, null, null, AuthType.BEARER_TOKEN, ContentType.ANY);
-				
+	
 		Assert.assertTrue(SchemaValidator.validateSchema(response, "getusersschema.json"));
 		
 	}
@@ -46,7 +46,7 @@ public class GoRestAPISchemaTest extends BaseTest{
 		Response response = 
 				restClient.post(BASE_URL_GOREST, GOREST_USERS_ENDPOINT, user, null, null, AuthType.BEARER_TOKEN, ContentType.JSON);
 		
-		Assert.assertTrue(SchemaValidator.validateSchema(response, "createuserschema1.json"));
+		Assert.assertTrue(SchemaValidator.validateSchema(response, "createuserschema.json"));
 		
 	}
 	
