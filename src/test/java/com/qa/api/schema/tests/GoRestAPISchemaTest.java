@@ -20,7 +20,7 @@ public class GoRestAPISchemaTest extends BaseTest{
 	
 	@BeforeClass
 	public void goRestTokenSetup(){
-		ConfigManager.set("bearertoken", "d0bf1714ac04c10dd2982e009d2dffe694a8e0b53af518cb7370e41e046a72f6");
+		ConfigManager.set("bearertoken", "5a537bba01c7d33ef75af0d5fe15d3cca1f7df54eeec9599af160e0ff9619a5c");
 	}
 	
 	@Test
